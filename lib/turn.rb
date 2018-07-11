@@ -8,7 +8,7 @@ def display_board(board)
 end
 
 def input_to_index (user_input)
-  user_input.to_i - 1 
+  user_input - 1 
 end 
 
 def position_empty?(board, index)
@@ -28,7 +28,7 @@ end
 
 def turn(board)
   puts "Please enter 1-9:"
-  user_input = gets.strip
+  user_input = gets.strip.to_i
   input_to_index(user_input)
   valid_move(board, user_input)
 end 
